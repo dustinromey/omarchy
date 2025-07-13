@@ -1,2 +1,2 @@
 # cp -R ../bin/xTuple /opt/
-# sudo chmod /opt/xTuple/xtuple*
+# sudo chmod +x /opt/xTuple/xtuple*
