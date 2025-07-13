@@ -31,8 +31,8 @@ alias gcad='git commit -a --amend'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 
 # Alias's to modified commands
-alias cp='cp -i'
-alias mv='mv -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
 alias rm='trash -v'
 alias mkdir='mkdir -p'
 

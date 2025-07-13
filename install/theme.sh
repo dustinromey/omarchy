@@ -8,6 +8,7 @@ gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
 # Setup theme links
 mkdir -p ~/.config/omarchy/themes
+rm -rf ~/.config/omarchy/themes/* # make sure there's nothing there
 for f in ~/.local/share/omarchy/themes/*; do ln -s "$f" ~/.config/omarchy/themes/; done
 
 # Set initial theme

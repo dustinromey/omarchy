@@ -1,5 +1,5 @@
 # Copy over Omarchy configs
-cp -R ~/.local/share/omarchy/config/* ~/.config/
+cp -Rf ~/.local/share/omarchy/config/* ~/.config/
 
 # Ensure application directory exists for update-desktop-database
 mkdir -p ~/.local/share/applications
