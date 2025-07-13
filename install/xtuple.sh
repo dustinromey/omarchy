@@ -1,1 +1,1 @@
-cp -R bin/xTuple /opt/
+cp -R ../bin/xTuple /opt/
