@@ -1,0 +1,16 @@
+[Desktop Entry]
+Categories=Utility;Office;
+Comment=Romey Inc. ERP
+Exec=/opt/xTuple/xtuple
+GenericName=
+Icon=/home/dustin/.local/share/icons/xtuple.png
+Name=xTuple
+NoDisplay=false
+Path=
+PrefersNonDefaultGPU=false
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
