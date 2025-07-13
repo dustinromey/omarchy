@@ -1,11 +1,11 @@
-ascii_art=' ▄██████▄    ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████  ▄████████    ▄█    █▄    ▄██   ▄  
+ascii_art=' ▄██████▄    ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████  ▄████████    ▄█    █▄    ▄██   ▄
 ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███   ███    ███ ███    ███   ███    ███   ███   ██▄
 ███    ███ ███   ███   ███   ███    ███   ███    ███ ███    █▀    ███    ███   ███▄▄▄███
 ███    ███ ███   ███   ███   ███    ███  ▄███▄▄▄▄██▀ ███         ▄███▄▄▄▄███▄▄ ▀▀▀▀▀▀███
 ███    ███ ███   ███   ███ ▀███████████ ▀▀███▀▀▀▀▀   ███        ▀▀███▀▀▀▀███▀  ▄██   ███
 ███    ███ ███   ███   ███   ███    ███ ▀███████████ ███    █▄    ███    ███   ███   ███
 ███    ███ ███   ███   ███   ███    ███   ███    ███ ███    ███   ███    ███   ███   ███
- ▀██████▀   ▀█   ███   █▀    ███    █▀    ███    ███ ████████▀    ███    █▀     ▀█████▀ 
+ ▀██████▀   ▀█   ███   █▀    ███    █▀    ███    ███ ████████▀    ███    █▀     ▀█████▀
                                           ███    ███                                    '
 
 echo -e "\n$ascii_art\n"
@@ -14,7 +14,7 @@ pacman -Q git &>/dev/null || sudo pacman -Sy --noconfirm --needed git
 
 echo -e "\nCloning Omarchy..."
 rm -rf ~/.local/share/omarchy/
-git clone https://github.com/basecamp/omarchy.git ~/.local/share/omarchy >/dev/null
+git clone https://github.com/dustinromey/omarchy.git ~/.local/share/omarchy >/dev/null
 
 # Use custom branch if instructed
 if [[ -n "$OMARCHY_REF" ]]; then
