@@ -33,7 +33,6 @@ alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=dow
 # Alias's to modified commands
 #alias cp='cp -i'
 #alias mv='mv -i'
-alias rm='trash -v'
 alias mkdir='mkdir -p'
 
 # alias chmod commands
