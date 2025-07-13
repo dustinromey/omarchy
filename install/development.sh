@@ -4,4 +4,4 @@ yay -S --noconfirm --needed \
   mariadb-libs postgresql-libs \
   github-cli \
   lazygit lazydocker-bin \
-  pgcli pspg
+  pgcli pspg qt6-wayland nodejs npm zed
