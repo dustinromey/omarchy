@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Utility;Office;
 Comment=Romey Inc. ERP
-Exec=/opt/xTuple/xtuple
+Exec=env QT_SCALE_FACTOR=1.5 /opt/xTuple/xtuple
 GenericName=
 Icon=/home/dustin/.local/share/icons/xtuple.png
 Name=xTuple
