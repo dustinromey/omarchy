@@ -3,17 +3,17 @@
   border-radius: 0;
   min-height: 0;
   font-family: CaskaydiaMono Nerd Font Propo;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #workspaces {
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 #workspaces button {
   all: initial;
-  padding: 3px 8px;
-  margin-right: 4px;
+  padding: 4px 10px;
+  margin-right: 5px;
 }
 
 #custom-dropbox,
@@ -24,16 +24,16 @@
 #pulseaudio,
 #clock,
 #custom-power-menu {
-  min-width: 16px;
-  margin-right: 18px;
+  min-width: 20px;
+  margin-right: 22px;
 }
 
 tooltip {
-  padding: 4px;
+  padding: 5px;
 }
 
 tooltip label {
-  padding: 4px;
+  padding: 5px;
 }
 
 @import "../omarchy/current/theme/waybar.css";
