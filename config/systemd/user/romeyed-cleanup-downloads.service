@@ -1,0 +1,7 @@
+[Unit]
+Description=Romeyed Downloads Cleanup
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/Code/omarchy/bin/romeyed-cleanup-downloads

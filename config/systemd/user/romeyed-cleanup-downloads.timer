@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Romeyed Downloads Cleanup daily
+Requires=romeyed-cleanup-downloads.service
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=1800
+
+[Install]
+WantedBy=timers.target

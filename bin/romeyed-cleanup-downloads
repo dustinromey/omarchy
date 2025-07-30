@@ -1,0 +1,60 @@
+
+#!/bin/bash
+
+# Romeyed Downloads Cleanup Script
+# Cleans up Downloads folder based on file age and type
+
+set -euo pipefail
+
+DOWNLOADS_DIR="$HOME/Downloads"
+ARCHIVE_DIR="$DOWNLOADS_DIR/archive"
+LOGFILE="$HOME/.local/share/omarchy/downloads-cleanup.log"
+
+# Create log directory if it doesn't exist
+mkdir -p "$(dirname "$LOGFILE")"
+
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOGFILE"
+}
+
+# Create archive directory if it doesn't exist
+if [[ ! -d "$ARCHIVE_DIR" ]]; then
+    mkdir -p "$ARCHIVE_DIR"
+    log "Created archive directory: $ARCHIVE_DIR"
+fi
+
+# Change to Downloads directory
+cd "$DOWNLOADS_DIR"
+
+log "Starting Downloads cleanup process"
+
+# 1. Delete EXPORT*.csv files
+log "Deleting EXPORT*.csv files..."
+find . -maxdepth 1 -name "EXPORT*.csv" -type f -print0 | while IFS= read -r -d '' file; do
+    if [[ -f "$file" ]]; then
+        rm "$file"
+        log "Deleted: $file"
+    fi
+done
+
+# 2. Move files older than 4 days to archive (excluding archive directory itself)
+log "Moving files older than 4 days to archive..."
+find . -maxdepth 1 -type f -mtime +4 -not -path "./archive/*" -print0 | while IFS= read -r -d '' file; do
+    if [[ -f "$file" ]]; then
+        filename=$(basename "$file")
+        mv "$file" "$ARCHIVE_DIR/"
+        log "Moved to archive: $filename"
+    fi
+done
+
+# 3. Delete files older than 1 month from archive
+log "Deleting files older than 1 month from archive..."
+find "$ARCHIVE_DIR" -type f -mtime +30 -print0 | while IFS= read -r -d '' file; do
+    if [[ -f "$file" ]]; then
+        filename=$(basename "$file")
+        rm "$file"
+        log "Deleted from archive: $filename"
+    fi
+done
+
+log "Downloads cleanup completed successfully"
